@@ -18,7 +18,7 @@ function SignIn(){
     });
 
     if (usernameIn.current.value !== "" && passIn.current.value !== ""){
-        var response = await fetch('https://localhost:7139/api/user/getpasswordcheck?'+ new URLSearchParams({
+        var response = await fetch('https://dotnet6webapi.azurewebsites.net/api/user/getpasswordcheck?'+ new URLSearchParams({
             username: usernameIn.current.value,
             pass: passIn.current.value
         }), {
