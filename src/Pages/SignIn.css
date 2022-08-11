@@ -1,0 +1,58 @@
+/* SignIn CSS */
+
+.SignInBackdrop {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color:rgb(110, 207, 198);
+  }
+
+h1 {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.title {
+    margin-top: 7%;
+  }
+
+input {
+    margin-top: 10%;
+}
+
+.purpleBtn {
+    margin-top: 4%;
+    background-color: blueviolet;
+    color: white;
+
+}
+.purpleBtn:hover {
+    background-color: rgb(165, 92, 233);
+    color: white;
+
+}
+
+.wrong {
+    color:red;
+    text-align: center;
+    margin-top: 3%;
+}
+
+#UserNF {
+    display: none;
+}
+
+#UserNA {
+    display: none;
+}
+
+#IncorrectPass {
+    display: none;
+}
+
+#Required {
+    display: none;
+}

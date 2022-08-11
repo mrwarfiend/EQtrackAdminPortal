@@ -1,0 +1,60 @@
+body {
+    overflow: hidden;
+    background-color: lightgrey;
+}
+
+.headerBack {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(110, 207, 198);
+    padding-top: 25px;
+    border-bottom: 2px solid rgb(77, 148, 141);
+    position: absolute;
+    box-shadow: 1px 1px 15px grey;
+}
+
+@media only screen and (max-width: 700px) {
+    .headerBack {
+        padding-top: 10px;
+    }
+}
+
+.headerBtn {
+float: right;
+margin-right: 15%;
+}
+
+
+.sidebar {
+    width: 25%;
+    height: 100%;
+    border-right: 2px solid lightgrey;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 1px 1px 15px grey;
+    background-color: white;
+    padding-top: 150px;
+}
+
+.content {
+    position: absolute;
+    border: 2px solid lightgrey;
+    right: 0;
+    height: calc(100% - 200px); 
+    width: 73%;
+    margin-right: 1%;
+    z-index: -1;
+    margin-top: 125px;
+    box-shadow: 1px 1px 15px grey;
+    background-color: white;
+    overflow: hidden;
+}
+
+.portalFooter {
+    background-color: rgb(110, 207, 198);
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: 2px solid rgb(77, 148, 141);
+}

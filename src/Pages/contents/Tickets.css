@@ -1,0 +1,13 @@
+.colTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.bb {
+    border-bottom: 1px solid gray;
+}
+
+.ticketsScroll {
+    overflow: scroll;
+    height: 600px;
+}

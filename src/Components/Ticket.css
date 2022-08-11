@@ -1,0 +1,8 @@
+.ticket {
+    text-align: center;
+}
+
+.brl {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
