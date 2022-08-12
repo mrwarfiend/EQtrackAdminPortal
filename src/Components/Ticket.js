@@ -1,4 +1,4 @@
-import './Ticket.css';
+import './CSS/Ticket.css';
 
 function Ticket(props){
     return (<div className="row ticket">

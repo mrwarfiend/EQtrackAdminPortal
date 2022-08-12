@@ -3,6 +3,10 @@ import react from 'react';
 import './Layout.css';
 import Tab from '../Components/Tab';
 import Tickets from './contents/Tickets';
+import ReturnTickets from './contents/ReturnTickets';
+import Inventories from './contents/Inventories';
+import DamagedInventories from './contents/DamagedInventories';
+import CurrentRenters from './contents/CurrentRenters';
 
 
 function Layout(){
@@ -33,19 +37,19 @@ function Layout(){
     }
     function switchReturnTickets(){
         ResetTabs();
-        screenUpdate(<h1 style={{color: 'black'}}>Returns</h1>);
+        screenUpdate(<ReturnTickets />);
     }
     function switchInventory(){
         ResetTabs();
-        screenUpdate(<h1 style={{color: 'black'}}>Inventory</h1>);
+        screenUpdate(<Inventories />);
     }
     function switchDamagedInventory(){
         ResetTabs();
-        screenUpdate(<h1 style={{color: 'black'}}>Damaged Inventory</h1>);
+        screenUpdate(<DamagedInventories />);
     }
     function switchCurrentRenters(){
         ResetTabs();
-        screenUpdate(<h1 style={{color: 'black'}}>Current Renters</h1>);
+        screenUpdate(<CurrentRenters />);
     }
     function switchTools(){
         ResetTabs();

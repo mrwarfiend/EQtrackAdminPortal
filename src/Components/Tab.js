@@ -1,4 +1,4 @@
-import './Tab.css';
+import './CSS/Tab.css';
 
 
 function Tab(props){
