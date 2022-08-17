@@ -1,7 +1,7 @@
 import Inventory from "../../Components/Inventory";
 import React from "react";
 
-function Inventories(){
+function Inventories(props){
     const [tickets, updateTickets] = React.useState([]);
 
     // Gets the Tickets from the database to map into the react page 
@@ -47,6 +47,15 @@ function Inventories(){
         });
         return t;
     }
+    function GetToolImage(id){
+        var t;
+        tools.forEach(Element=>{
+            if (Element.id === id){
+                t = Element.image;
+            }
+        });
+        return t;
+    }
 
 
     const [categs, updateCategs] = React.useState([]);
@@ -75,6 +84,7 @@ function Inventories(){
     return (<div className="container-fluid">
         <div className="row">
             <h1 style={{color: 'black'}}>Inventories</h1>
+            <button onClick={props.onClick}>Create New</button>
         </div>
         <div className="row bb shadow">
 
@@ -83,7 +93,7 @@ function Inventories(){
             <div className="col-1"></div>
             <div className="col-10">
                 <div className="row">
-                    {tickets.map(item=><Inventory key={item.id} tool={GetToolName(item.toolID)} count={item.count} inventory={item.name} category={GetCategName(item.id)}/>)}
+                    {tickets.map(item=><Inventory key={item.id} image={"https://dotnet6app.azurewebsites.net/images/tools/"+GetToolImage(item.toolID)} tool={GetToolName(item.toolID)} count={item.count} inventory={item.name} category={GetCategName(item.id)}/>)}
                 </div>
             </div>
             <div className="col-1"></div>

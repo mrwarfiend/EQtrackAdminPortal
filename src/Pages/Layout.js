@@ -7,6 +7,11 @@ import ReturnTickets from './contents/ReturnTickets';
 import Inventories from './contents/Inventories';
 import DamagedInventories from './contents/DamagedInventories';
 import CurrentRenters from './contents/CurrentRenters';
+import Tools from './contents/Tools';
+import Categories from './contents/Categories';
+import CreateTool from './contents/CreateTool';
+import CreateCategory from './contents/CreateCategory';
+import CreateInventory from './contents/CreateInventory';
 
 
 function Layout(){
@@ -41,7 +46,10 @@ function Layout(){
     }
     function switchInventory(){
         ResetTabs();
-        screenUpdate(<Inventories />);
+        screenUpdate(<Inventories onClick={switchCreateInventory}/>);
+    }
+    function switchCreateInventory(){
+        screenUpdate(<CreateInventory onClick={switchInventory}/>)
     }
     function switchDamagedInventory(){
         ResetTabs();
@@ -53,11 +61,17 @@ function Layout(){
     }
     function switchTools(){
         ResetTabs();
-        screenUpdate(<h1 style={{color: 'black'}}>Tools</h1>);
+        screenUpdate(<Tools onClick={switchCreateTool}/>);
+    }
+    function switchCreateTool(){
+        screenUpdate(<CreateTool onClick={switchTools}/>)
     }
     function switchCategories(){
         ResetTabs();
-        screenUpdate(<h1 style={{color: 'black'}}>Categories</h1>);
+        screenUpdate(<Categories onClick={switchCreateCategory}/>);
+    }
+    function switchCreateCategory(){
+        screenUpdate(<CreateCategory onClick={switchCategories}/>);
     }
 
     return (<div>
@@ -82,6 +96,7 @@ function Layout(){
             <Tab title="Current Renters" id="currentRenters" onClick={switchCurrentRenters}/>
             <Tab title="Tools" id="tools" onClick={switchTools} />
             <Tab title="Categories" id="categories" onClick={switchCategories}/>
+
         </div>
 
         <div className='content'>
